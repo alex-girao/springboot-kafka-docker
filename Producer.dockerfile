@@ -7,4 +7,4 @@ EXPOSE 8090
 
 COPY producer/target/*.jar producer.jar
 
-ENTRYPOINT ["java","-jar","producer.jar"]
+# ENTRYPOINT ["java","-jar","producer.jar"]

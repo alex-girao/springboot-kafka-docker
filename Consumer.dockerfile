@@ -7,4 +7,4 @@ EXPOSE 8091
 
 COPY consumer/target/*.jar consumer.jar
 
-ENTRYPOINT ["java","-jar","consumer.jar"]
+# ENTRYPOINT ["java","-jar","consumer.jar"]

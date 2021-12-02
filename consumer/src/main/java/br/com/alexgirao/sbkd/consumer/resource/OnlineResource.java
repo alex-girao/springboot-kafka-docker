@@ -1,10 +1,10 @@
-package br.com.alexgirao.sbkd.consumer.controller;
+package br.com.alexgirao.sbkd.consumer.resource;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class OnlineController {
+public class OnlineResource {
 	
 	@GetMapping("/online")
 	public String getMessage() {
