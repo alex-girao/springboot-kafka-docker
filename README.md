@@ -6,9 +6,19 @@ Ecossistema funcional com Spring Boot, Kafka e Docker
 ```bash
 mvn -f producer/ clean install -DskipTests
 ```
+ou dentro da pasta producer
+```bash
+./mvnw clean install -DskipTests
+
+```
 #### build do consumer
 ```bash
 mvn -f consumer/ clean install -DskipTests
+```
+ou dentro da pasta consumer
+```bash
+./mvnw clean install -DskipTests
+
 ```
 #### subir o ambiente
 ```bash
