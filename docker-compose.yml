@@ -35,23 +35,25 @@ services:
     environment:
       KAFKA_BROKERCONNECT: kafka:29092
   
-  producer:
-    build:
-      dockerfile: Producer.dockerfile
-      context: .
-    depends_on:
-      - kafdrop
-    ports:
-      - 8090:8090
+  #producer:
+    #build:
+      #dockerfile: Producer.dockerfile
+      #context: .
+    #networks:
+      #- broker-kafka
+    #depends_on:
+      #- kafdrop
+    #ports:
+      #- 8090:8090
 
-  consumer:
-    build:
-      dockerfile: Consumer.dockerfile
-      context: .
-    depends_on:
-      - producer
-    ports:
-      - 8091:8091
+  #consumer:
+    #build:
+      #dockerfile: Consumer.dockerfile
+      #context: .
+    #depends_on:
+      #- producer
+    #ports:
+      #- 8091:8091
 
 networks:
   broker-kafka:
