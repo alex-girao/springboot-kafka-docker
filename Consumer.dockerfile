@@ -1,5 +1,10 @@
-FROM openjdk:8-jdk-alpine
-EXPOSE 8084
-COPY target/*.jar app.jar
-#ENTRYPOINT ["java","-jar","/app.jar"]
-ENTRYPOINT ["java","-jar","/app.jar"]
+FROM openjdk:11-jre-slim
+
+LABEL descripton="app_consumer"
+LABEL version="1.0.0"
+
+EXPOSE 8091
+
+COPY consumer/target/*.jar consumer.jar
+
+ENTRYPOINT ["java","-jar","consumer.jar"]
